@@ -1,0 +1,245 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107;
+}
+
+/* Hero Section */
+
+.hero-section {
+    background-color: #007bff; /* Change this color as desired */
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+}
+
+header {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Services Section */
+#services {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+#services h2 {
+    color: #007bff;
+}
+
+#services .col-md-4 {
+    transition: transform 0.3s;
+}
+
+#services .col-md-4:hover {
+    transform: translateY(-10px);
+}
+
+/* Dynamic Counter Section */
+#impact {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+}
+
+#impact h2 {
+    color: #007bff;
+}
+
+/* Team Section */
+#team {
+    padding: 60px 0;
+}
+
+#team img {
+    border: 5px solid #007bff;
+    transition: transform 0.3s;
+}
+
+#team img:hover {
+    transform: scale(1.05);
+}
+
+/* FAQ Section */
+#faq {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.accordion-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007bff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffc107;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+}
+
+.pop-up-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.pop-up-button:hover {
+    transform: scale(1.1); /* Scale the button to 110% of its size */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+#company-profile {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 0; /* Padding for top and bottom */
+}
+
+#company-profile h2 {
+    color: #007bff; /* Primary color for the heading */
+}
+
+#company-profile p {
+    color: #343a40; /* Dark color for the text */
+    max-width: 600px; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the text */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Color of the scrollbar thumb on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #007bff #f1f1f1; /* thumb color and track color */
+}
+
+/* Mobile view adjustments for Services section */
+@media (max-width: 768px) {
+    #services .row, #impact .row {
+        display: flex; /* Use flexbox for the row */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between; /* Space between items */
+    }
+
+    #services .col-4, #impact .col-4 {
+        flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+        margin: 5px; /* Decrease margin for closer spacing */
+        min-height: 250px; /* Set a minimum height for cards */
+        display: flex; /* Use flexbox for the card */
+        flex-direction: column; /* Align items vertically */
+        justify-content: center; /* Center content vertically */
+        text-align: center; /* Center text alignment */
+    }
+
+    .card {
+        flex: 1; /* Allow the card to grow and fill the available space */
+        display: flex; /* Use flexbox for the card */
+        flex-direction: column; /* Align items vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    /* Adjust font sizes for mobile */
+    #services .card-title {
+        font-size: 1.1rem; /* Adjust title size to be smaller */
+        margin-top: 10px; /* Add margin for spacing */
+    }
+
+    #services .card-text {
+        font-size: 0.85rem; /* Adjust text size to be smaller */
+        margin-top: 5px; /* Add margin for spacing */
+    }
+
+    /* Ensure icons are not too large */
+    #services .fa-3x {
+        font-size: 2rem; /* Adjust icon size */
+    }
+}
